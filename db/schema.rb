@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170913102952) do
+ActiveRecord::Schema.define(version: 20170913110155) do
 
   create_table "amenities", force: :cascade do |t|
     t.string "name"
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20170913102952) do
     t.string "first_name"
     t.string "last_name"
     t.string "mobile_no"
-    t.integer "role_id"
+    t.integer "role_id", default: 3
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
