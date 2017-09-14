@@ -7,7 +7,7 @@ class Room < ApplicationRecord
 
   before_validation :set_latitude_longitude
 
-  validates :name, :address, :user, presence: true
+  validates :name, :address,:city, :user, presence: true
   validates :name, :address, uniqueness: true
   validates :price, :latitude, :longitude, numericality: true
 
